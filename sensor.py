@@ -2,7 +2,7 @@ import math
 from sample_data import *
 from createArray import *
 from TEST_DATASET import *
-
+from matplotlib import pyplot as plt
 
 class Sensor:
     def __init__(self, map_data, sensor_position, coverage):
@@ -24,23 +24,24 @@ class Sensor:
     
 
 #<test_data>
-sensor_range = 30
-data_map = rectangle_140by140
+sensor_range = 6
+data_map = truncated_140by140
 
 
 
 #인스턴스1 생성 - 센서(2,2)
-sensor_position = (50,46)
+sensor_position = (30,50)
 test_instance = Sensor(data_map, sensor_position, sensor_range)
 #print(test_instance.deploy_sensor())
 data_map = test_instance.deploy_sensor()
-'''
+
 #인스턴스2 생성 - 센서(0,0)
 sensor_position = (90,70)
-test_instance2 = Sensor(data, sensor_position, sensor_range)
+test_instance2 = Sensor(data_map, sensor_position, sensor_range)
 #print(test_instance2.deploy_sensor())
 data = test_instance2.deploy_sensor()
-'''
-#결과
-visual_array("결과", data_map)
 
+
+#결과 출력
+plt.imshow(data_map, cmap='jet')
+plt.show()

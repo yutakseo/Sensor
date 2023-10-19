@@ -4,12 +4,14 @@ import math, os, sys
 __file__ = os.getcwd()
 __root__ = os.path.dirname(__file__)
 
-mapdata_dir_path = os.path.join(__root__,"MapData")
-sys.path.append(mapdata_dir_path)
+map_data_dir_path = os.path.join(__root__,"MapData")
+visual_tool_dir_path = os.path.join(__root__,"VisualizationTool")
+sys.path.append(map_data_dir_path)
+sys.path.append(visual_tool_dir_path)
 
 from TEST_DATASET import *
+from VisualizationModule import *
 from matplotlib import pyplot as plt
-
 
 
 
@@ -25,5 +27,6 @@ test_instance2.deploy_sensor()
 
 
 #결과 출력
-plt.imshow(data_map, cmap='jet')
-plt.show()
+visual_tool  = VisualTool()
+visual_tool.showJetMap("test",data_map)
+

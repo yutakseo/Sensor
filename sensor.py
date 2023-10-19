@@ -1,14 +1,4 @@
-import math, os, sys
-
-__file__ = os.getcwd()
-__root__ = os.path.dirname(__file__)
-
-mapdata_dir_path = os.path.join(__root__,"MapData")
-sys.path.append(mapdata_dir_path)
-
-from TEST_DATASET import *
-from matplotlib import pyplot as plt
-
+import math
 
 class Sensor:
     def __init__(self, map_data, sensor_position, coverage):

@@ -17,7 +17,7 @@ from matplotlib import pyplot as plt
 
 data_map = rectangle_140by140
 
-
+print(data_map)
 #인스턴스1 생성
 test_instance = Sensor(data_map, (30,50), 20)
 test_instance.deploy_sensor()

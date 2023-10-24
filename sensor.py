@@ -15,10 +15,16 @@ class Sensor:
 
                 if cell_length <= self.coverage:
                     self.map_data[i][j] += 10
-                    
+            non_coverd_area = self.map_data                
         return self.map_data
     
-
+    '''
+    def non_coverd_area(self):
+        for i in range(0, len(self.map_data)):
+            for j in range(0, len(self.map_data[0])):
+                if self.map_data[i][j] == 1 :
+       '''             
+        
 
 
 
